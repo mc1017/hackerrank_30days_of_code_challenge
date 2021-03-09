@@ -1,0 +1,67 @@
+//Abstract classes are used when we want to call a function but the fuction 
+//does not have a definition in the class, but is in the subclass. 
+
+//It allows future expansion of classes
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+class Book{
+    protected:
+        string title;
+        string author;
+    public:
+        Book(string t,string a){
+            title=t;
+            author=a;
+        }
+        virtual void display()=0;
+
+};
+
+// Write your MyBook class here
+
+    //   Class Constructor
+    //   
+    //   Parameters:
+    //   title - The book's title.
+    //   author - The book's author.
+    //   price - The book's price.
+    //
+    // Write your constructor here
+class MyBook: public Book{
+    private:
+        int price;
+    public:
+    
+        MyBook(std::string title_, std::string author_, int price_): Book(title_, author_), price(price_){ 
+        }
+        void display(){
+            std::cout<<"Title: "<<title<<std::endl;
+            std::cout<<"Author: "<<author<<std::endl;
+            std::cout<<"Price: "<<price<<std::endl;
+        } 
+};
+    
+    //   Function Name: display
+    //   Print the title, author, and price in the specified format.
+    //
+    // Write your method here
+    
+// End class
+
+int main() {
+    string title,author;
+    int price;
+    getline(cin,title);
+    getline(cin,author);
+    cin>>price;
+    MyBook novel(title,author,price);
+    novel.display();
+    return 0;
+}
+
