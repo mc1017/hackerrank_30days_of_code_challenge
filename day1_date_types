@@ -1,13 +1,15 @@
-#include <iostream>
-#include <iomanip>
-#include <limits>
 
-using namespace std;
-
-int main() {
-    int i = 4;
-    double d = 4.0;
-    string s = "HackerRank ";
+    int a;
+    double b;
+    std::string c;
+    std::cin >>a;
+    std::cin>>b;
+    cin.ignore();  //ignores an end of line character 
+    getline(cin, c);   
+    std::cout<< a+i<<std::endl<<std::fixed<<std::setprecision(1)<<b+d<<std::endl<<s+c<<std::endl;
+    
+    
+    
 
     
     // Declare second integer, double, and String variables.
@@ -22,4 +24,3 @@ int main() {
     // Concatenate and print the String variables on a new line
     // The 's' variable above should be printed first.
 
-    return 0;

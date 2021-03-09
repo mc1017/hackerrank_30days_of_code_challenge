@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+
+
+int main()
+{
+    int N;
+    cin >> N;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    
+    if (N%2 == 0){
+        if (N<=5 && N>=2){
+            std::cout<<"Not Weird"<<std::endl;
+        }
+        if (N<=20 && N>=6){
+            std::cout<<"Weird"<<std::endl;
+        }
+        else if (N> 20){
+            std::cout<<"Not Weird"<<std::endl;
+        }
+    }
+    else {
+        std::cout<<"Weird"<<std::endl;
+    }
+
+    return 0;
+}
