@@ -1,0 +1,38 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int n, count=0;
+    std::string word = "";
+    char character;
+    std::vector<char> characters;
+    std::vector<std::string> wordlist;
+    std::cin>>n;
+    
+    for ( int i=0; i<n; i++){
+        std::cin>>word;
+        wordlist.push_back(word);
+        for (int j=0; j<word.length(); j++){
+            characters.push_back(wordlist[i][j]);
+            
+        }  
+        for (int h=0; h<characters.size(); h=h+2){
+            std::cout<<characters[h];
+        }  
+        std::cout<<" ";
+        for (int h=1; h<characters.size(); h=h+2){
+            std::cout<<characters[h];
+        }
+        std::cout<<std::endl;  
+        characters.clear();   
+    
+    }
+    return 0;
+}    
+
+
