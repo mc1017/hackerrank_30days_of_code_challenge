@@ -1,0 +1,33 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <map>
+using namespace std;
+
+
+
+int main() {
+    int n,phonenum,pos;
+    std::string name,query;
+    std::cin>>n;
+    map<string, int> phonebook; 
+    map<string, int>::iterator it;
+    
+    for (int i=0; i<n; i++){
+        std::cin>>name>>phonenum;
+        phonebook[name]=phonenum;
+    }
+    while (std::cin>>query){
+
+        if (phonebook.find(query)!= phonebook.end()){
+            std::cout<<query<<"="<<phonebook.find(query)->second<<std::endl;
+        }
+        else{
+            std::cout<<"Not found"<<std::endl;
+        }  
+               
+    }
+    
+}
