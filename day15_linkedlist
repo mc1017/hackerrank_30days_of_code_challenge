@@ -31,7 +31,6 @@ class Solution{
         
         //return the original pointer, which does not change its pointing box
         return head;
-            //Complete this method
     }
     
       void display(Node *head)
